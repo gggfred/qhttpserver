@@ -18,14 +18,14 @@ CONFIG(debug, debug|release) {
 
 DEFINES += QHTTPSERVER_EXPORT
 
-INCLUDEPATH += $$QHTTPSERVER_BASE/http-parser
+INCLUDEPATH += $$QHTTPSERVER_BASE/3rdParty/http-parser
 
-PRIVATE_HEADERS += $$QHTTPSERVER_BASE/http-parser/http_parser.h qhttpconnection.h
+PRIVATE_HEADERS += $$QHTTPSERVER_BASE/3rdParty/http-parser/http_parser.h qhttpconnection.h
 
 PUBLIC_HEADERS += qhttpserver.h qhttprequest.h qhttpresponse.h qhttpserverapi.h qhttpserverfwd.h
 
 HEADERS = $$PRIVATE_HEADERS $$PUBLIC_HEADERS
-SOURCES = *.cpp $$QHTTPSERVER_BASE/http-parser/http_parser.c
+SOURCES = *.cpp $$QHTTPSERVER_BASE/3rdParty/http-parser/http_parser.c
 
 OBJECTS_DIR = $$QHTTPSERVER_BASE/build
 MOC_DIR = $$QHTTPSERVER_BASE/build
