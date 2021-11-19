@@ -1,6 +1,7 @@
 # Folders
 build
 lib
+install
 
 # Generated
 Makefile
