@@ -57,14 +57,3 @@ install(
     RUNTIME DESTINATION  "${CMAKE_INSTALL_BINDIR}"
     INCLUDES DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
 )
-
-set(headers.path include)
-set(headers.files ${HEADERS_PUBLIC})
-
-foreach(items IN ITEMS headers)
-    install(
-        FILES ${CMAKE_CURRENT_SOURCE_DIR}/${${items}.files}
-        DESTINATION ${${items}.path}
-        PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ
-    )
-endforeach()
