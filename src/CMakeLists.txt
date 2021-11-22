@@ -57,3 +57,11 @@ install(
     RUNTIME DESTINATION  "${CMAKE_INSTALL_BINDIR}"
     INCLUDES DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
 )
+
+# Headers:
+#   - foo/*.h -> <prefix>/include/foo/*.h
+install(
+    FILES ${HEADERS_PUBLIC}
+    DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${LIBRARY_FOLDER}"
+)
+
