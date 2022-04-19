@@ -13,6 +13,7 @@ find_package(QT NAMES Qt6 Qt5 COMPONENTS Core Network REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Network REQUIRED)
 
 set(QHTTPSERVER_BASE ..)
+add_definitions(-DQHTTPSERVER_EXPORT)
 
 # Introduce variables:
 #   - CMAKE_INSTALL_LIBDIR
