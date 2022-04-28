@@ -158,7 +158,7 @@ void QHttpResponse::write(const QByteArray &data)
         return;
     }
 
-    if (m_connection->isOpen()) {
+    if (!m_connection->isOpen()) {
         qWarning() << "QHttpResponse::write() Socket is closed.";
         return;
     }
