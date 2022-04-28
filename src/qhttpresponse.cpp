@@ -171,6 +171,11 @@ void QHttpResponse::waitForBytesWritten()
     m_connection->waitForBytesWritten();
 }
 
+bool QHttpResponse::isOpen()
+{
+    return m_connection->isOpen();
+}
+
 void QHttpResponse::end(const QByteArray &data)
 {
     if (m_finished) {

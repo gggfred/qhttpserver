@@ -121,6 +121,9 @@ public Q_SLOTS:
     /** @note writeHead() must be called before this function. */
     void waitForBytesWritten();
 
+    /// Check if connection is open to allow transmition
+    bool isOpen();
+
     /// End/finish the response.
     /** Data will be flushed to the underlying socket
         and the connection itself will be closed if

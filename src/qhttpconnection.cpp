@@ -126,6 +126,11 @@ void QHttpConnection::waitForBytesWritten()
     m_socket->waitForBytesWritten();
 }
 
+book QHttpConnection::isOpen()
+{
+    return m_socket->isOpen();
+}
+
 void QHttpConnection::responseDone()
 {
     QHttpResponse *response = qobject_cast<QHttpResponse *>(QObject::sender());
