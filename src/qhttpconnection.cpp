@@ -126,7 +126,7 @@ void QHttpConnection::waitForBytesWritten()
     m_socket->waitForBytesWritten();
 }
 
-book QHttpConnection::isOpen()
+bool QHttpConnection::isOpen()
 {
     return m_socket->isOpen();
 }
